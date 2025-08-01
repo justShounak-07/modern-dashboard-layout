@@ -1,0 +1,78 @@
+.dashboard {
+    display: grid;
+    height: 100vh;
+    /* For considering full height */
+    width: 100vw;
+    /* for full width till end. */
+
+    background-color: rgb(187, 193, 193);
+
+}
+
+.sidebar {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 22;
+    background-color: rgb(13, 136, 185);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 10px;
+    padding-left: 30px;
+}
+
+.sidebar-item {
+    display: grid;
+    /* well this is for creating both icons and text in same as grid. */
+    grid-template-columns: 90px auto;
+    align-items: center;
+    /* for keeping the text center to the image.  */
+    gap: 15px;
+    /* this is the gap between icons and text */
+    color: whitesmoke;
+    font-size: larger;
+
+}
+
+.sidebar-item img {
+    width: 90px;
+    height: 90px;
+}
+
+.sidebar-dashboard {
+    display: grid;
+    grid-template-columns: 100px auto;
+    gap: 30px;
+    align-items: center;
+
+    font-size: x-large;
+    padding: 10px 0;
+    color: whitesmoke;
+}
+
+.sidebar-dashboard img {
+    width: 120px;
+    height: 140px;
+}
+
+
+
+
+.header {
+    grid-column-start: 2;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 6;
+    background-color: white;
+    box-shadow: 0px 8px 10px rgb(127, 127, 127);
+    z-index: 1;
+}
+
+.content {
+    grid-column-start: 2;
+    grid-column-end: 9;
+    grid-row-start: 6;
+    grid-row-end: 22;
+    background-color: rgb(187, 193, 193);
+}
