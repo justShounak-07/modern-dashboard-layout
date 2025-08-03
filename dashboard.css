@@ -130,6 +130,7 @@
     width: 100%;
     display: grid;
     grid-template-columns: 2fr 1fr;
+    /* it will occupy 2/3rd place for search bar and 1/3rd for rest.  */
     align-items: center;
 }
 
@@ -177,10 +178,69 @@
 
 }
 
-.content {
+.main {
     grid-column-start: 2;
     grid-column-end: 9;
     grid-row-start: 6;
     grid-row-end: 22;
     background-color: rgb(187, 193, 193);
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 30px;
+}
+
+.main-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+
+}
+
+
+.project-items {
+    display: grid;
+    grid-template-columns: repeat(2, 500px);
+    grid-template-rows: repeat(3, 250px);
+    gap: 20px;
+
+}
+
+.project-items>div {
+    /* border: 2px solid; */
+    background-color: white;
+    border-left: 30px solid rgb(243, 229, 86);
+    border-radius: 20px;
+}
+
+.announcement,
+.trending {
+    display: grid;
+    grid-template-rows: repeat(auto, 250px);
+    /* this will remove the extra space or padding in between first element.   */
+    grid-template-columns: repeat(1, 500px);
+    column-gap: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0px 6px 10px black;
+}
+
+.announcement .info {
+    padding-bottom: 32px;
+    border-bottom: 2px solid black;
+}
+
+.announcement .info:last-child {
+    border-bottom: none;
+}
+
+.trending .trend {
+    padding-bottom: 32px;
 }
