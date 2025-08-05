@@ -204,7 +204,7 @@
 }
 
 
-.project-items {
+.projects {
     display: grid;
     grid-template-columns: repeat(2, 500px);
     grid-template-rows: repeat(3, 250px);
@@ -212,11 +212,29 @@
 
 }
 
-.project-items>div {
+.projects>div {
     /* border: 2px solid; */
     background-color: white;
     border-left: 30px solid rgb(243, 229, 86);
     border-radius: 20px;
+    padding-left: 10px;
+}
+
+.project-item>.project-icons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    padding-right: 10px;
+}
+
+.project-icons img {
+    width: 40px;
+    height: 40px;
+}
+
+.project-item>.project-text {
+    padding-top: 2px;
 }
 
 .announcement,
@@ -234,7 +252,10 @@
 
 .announcement .info {
     padding-bottom: 32px;
-    border-bottom: 2px solid black;
+    padding-top: 20px;
+    border-bottom: 2px dashed rgb(186, 184, 184);
+    /* providing the beneath line  */
+    font-size: x-large;
 }
 
 .announcement .info:last-child {
@@ -243,4 +264,18 @@
 
 .trending .trend {
     padding-bottom: 32px;
+}
+
+.trend>.trend-icon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    padding-left: 15px;
+    font-size: x-large;
+}
+
+.trend-icon img {
+    width: 40px;
+    height: 40px;
 }
